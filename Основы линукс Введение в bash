@@ -21,8 +21,19 @@ $ mv test.txt test_original.txt #move (rename) a copy of ... as ...
 $ echo 'Hello' > test_original.txt #write a text into file
 $ cat test_original.txt #read text inside file
 
-$ rm text_copy.txt #delete file
+$ rm text_copy.txt #remove (delete) file
 $ rm -rf yes TestDir # == delete an NOT empty directory !a recursive force
 $ rm -R Test # == delete an NOT empty directory !a recursive force
 $ rmdir Test #remove an empty directory
+
+REPOSITORY
+$ git init #Initialized empty Git repository in C:/Users/user/Desktop/repo/.git/
+$ ls -a #shows a hidden objects
+./  ../  .git/
+$ git status
+On branch master #we here
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+
+
 
