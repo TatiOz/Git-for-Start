@@ -8,7 +8,6 @@ $ git config --global color.ui auto
 $ git config --list #see setted config-s
 use Q to get out of (END)
 
-
 cd - change directory
 cd .. - one level up
 cd ../.. - two level up
@@ -27,6 +26,7 @@ $ rm -R Test # == delete an NOT empty directory !a recursive force
 $ rmdir Test #remove an empty directory
 
 
+
 REPOSITORY
 $ git init #Initialized empty Git repository in C:/Users/user/Desktop/repo/.git/
 $ ls -a #shows a hidden objects
@@ -41,7 +41,6 @@ $ git remote add origin https://github.com/TatiOz/repo-github.git #add a link fr
 $ git remote -v #show list of remote conections
 origin  https://github.com/TatiOz/repo-github.git (fetch)
 origin  https://github.com/TatiOz/repo-github.git (push)
-
 
 1) $ git add <file> #to add to rep.
 $ git restore --staged <file> #to unstage file
@@ -61,6 +60,17 @@ and after that images RED
 
 $ touch .gitignore #file with ignored for adding index (commitment?)
 $ echo 'config' > .gitignore #add name of file into .gitignore
+
+
+
+#HISTORY
+$ git log #to see commits change history + comments
+$ git log --oneline #compact version
+$ git reflog #to see commits change history + OTHER changes (del, reset, cancel)+ comments
+
+$ git reset 0d1c1c9 #we go back to the chosen commit
+$ git revert 5c349f3 #create a new commit which canceled actions made in the previous commit
+
 
 
 
