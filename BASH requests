@@ -106,6 +106,8 @@ $ git push --set-upstream origin dev  #to upload to git
 $ git pull #to load changes from git
 
 ADDITINAL
+https://stackoverflow.com/questions/12799719/how-to-upload-a-project-to-github
+
 $ git stash push --include-untracked
 If you want remove all local changes - including files that are untracked by git - from your working copy, simply stash them:
 
