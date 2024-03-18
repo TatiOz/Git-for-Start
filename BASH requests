@@ -88,13 +88,12 @@ $ git branch dev-master master
 $ git checkout -b dev-test
 Switched to a new branch 'dev-test' #if it not exist ->create a new branch 
 
-
 $ ssh-keygen
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/c/Users/user/.ssh/id_ed25519):
 ...
 
-$ cat  /c/Users/user/.ssh/id_ed25519
+$ cat  /c/Users/user/.ssh/id_ed25519.pubcat 
 
 $ git clone git@github.com:T/ptoject.git project 
                      (ssh link from git) (where to add)
@@ -114,13 +113,16 @@ $ git stash drop
 If you don't need them anymore, you now can drop that stash
 
 
-If you don't want to stash changes that you already staged - e.g. with git add - then add the option --keep-index. 
+If you don't want to stash changes that you already staged - e.g. with git add - then add the option $ --keep-index. 
 Note however, 
 that this will still prevent merging if those staged changes collide with the ones from upstream.
 
 
+to override all local changes and does not require an identity:
+$ git reset --hard
+$ git pull
 
-
+$ git fetch
 
 
 
