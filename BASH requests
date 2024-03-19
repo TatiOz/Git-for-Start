@@ -39,11 +39,13 @@ nothing to commit (create/copy files and use "git add" to track)
 $ git remote add origin https://github.com/TatiOz/repo-github.git #add a link from git into local repository
 
 $ git remote -v #show list of remote conections
+
 origin  https://github.com/TatiOz/repo-github.git (fetch)
 origin  https://github.com/TatiOz/repo-github.git (push)
 
 1) $ git add <file> #to add to rep.
 $ git restore --staged <file> #to unstage file
+$ git add . #add all files on dir
 
 2) 
 $ git commit 
@@ -66,6 +68,7 @@ $ echo 'config' > .gitignore #add name of file into .gitignore
 #HISTORY
 $ git log #to see commits change history + comments
 $ git log --oneline #compact version
+$ git log --oneline --graph --all
 $ git reflog #to see commits change history + OTHER changes (del, reset, cancel)+ comments
 
 $ git reset 0d1c1c9 #we go back to the chosen commit
@@ -99,23 +102,28 @@ $ git clone git@github.com:T/ptoject.git project
                      (ssh link from git) (where to add)
 $ git push #to load changes on git
 
-$ git push --set-upstream origin dev  #to upload to git
+$ git push --set-upstream origin <dev>  #to upload to gitHAB PART OF BRANCH
                     (remore rep) (what we want to load)
 == $ git push -u origin dev
+$ git push <origin> --all #to upload to gitHAB ALL OF BRANCH
+$ git push <origin> --mirror #?is better? #to upload to gitHAB ALL OF BRANCH
+https://git-scm.com/docs/git-push#git-push---mirror
 
-$ git pull #to load changes from git
+$ git pull #to load changes from gitHAB 
 
 ADDITINAL
 https://stackoverflow.com/questions/12799719/how-to-upload-a-project-to-github
 
 $ git stash push --include-untracked
-If you want remove all local changes - including files that are untracked by git - from your working copy, simply stash them:
+If you want remove all local changes - including files that are untracked by git 
+- from your working copy, simply stash them:
 
 $ git stash drop
 If you don't need them anymore, you now can drop that stash
 
 
-If you don't want to stash changes that you already staged - e.g. with git add - then add the option $ --keep-index. 
+If you don't want to stash changes that you already staged - e.g. with git add - 
+then add the option $ --keep-index. 
 Note however, 
 that this will still prevent merging if those staged changes collide with the ones from upstream.
 
@@ -124,7 +132,24 @@ to override all local changes and does not require an identity:
 $ git reset --hard
 $ git pull
 
-$ git fetch
+$ git fetch #download updates (to update a new branch -> need to $ git checkout <a new branch>)
+
+$ git merge dev (we on main)
+$ git branch -d <branch-1> <branch-2>
+$ git push --delete origin branch-2-1 #sdd info to gitHUB about delited branch
+$ git push <origin> --mirror #?is better? #to upload to gitHAB ALL changes
+
+$ git rebase <main> (we on branch and want to rebase at the end of main from the start of the branch) # 
+
+$ git push
+To https://github.com/TatiOz/KrakRepo.git
+ ! [rejected]        feature1 -> feature1 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/TatiOz/KrakRepo.git'
+
+TO SUBMIT CHANGES
+$ git push --force
+
+
 
 
 
