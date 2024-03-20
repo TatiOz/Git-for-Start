@@ -146,11 +146,29 @@ To https://github.com/TatiOz/KrakRepo.git
  ! [rejected]        feature1 -> feature1 (non-fast-forward)
 error: failed to push some refs to 'https://github.com/TatiOz/KrakRepo.git'
 
-TO SUBMIT CHANGES
+TO SUBMIT CHANGES to gitHUBme
 $ git push --force
 
 
+TAGS
+$ git tag 1.0.0 #to put a tag
+$ git tag -a 0.0.1 bb5424f -m'Put a tag on an older place'
 
+
+$ git tag
+1.0.0
+oldold
+
+$ git tag --list
+1.0.0
+oldold
+
+$ git push --tags
+
+$ git tag -d 1.0.1 #delete a tag
+$ git push --delete origin <1.0.1> #from remote repo
+
+#PULL-REQUEST
 
 
 
