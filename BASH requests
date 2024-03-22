@@ -170,6 +170,29 @@ $ git push --delete origin <1.0.1> #from remote repo
 
 #PULL-REQUEST
 
+#STASH
+$ git stash #save all changes for the branch only
+
+$ git stash list # to see all stashes for now
+
+$ git stash push dev-branch.md #to add the file to the current branch
+
+$ git stash pop stash@{0}
+
+
+#SQUASH -СКЛЕИТЬ
+1)
+$ git merge squash-dev --squash
+# take changes from the branch, but without commit
+
+2)
+$ git rebase -i HEAD~3  #from the first commit where we want to squash to the 3d 
++ rewrite actions in file
+pick
+pick->f
+pick->f
+
+$ git reset --hard #reset to the last commit
 
 
 
