@@ -182,17 +182,20 @@ $ git stash pop stash@{0}
 
 #SQUASH -СКЛЕИТЬ
 1)
-$ git merge squash-dev --squash
+$ git merge <squash-dev> --squash
 # take changes from the branch, but without commit
 
 2)
-$ git rebase -i HEAD~3  #from the first commit where we want to squash to the 3d 
+$ git rebase -i HEAD~X  #from the first commit where we want to squash X commits 
 + rewrite actions in file
 pick
 pick->f
 pick->f
 
 $ git reset --hard #reset to the last commit
+
+
+#CHERRY PICK
 
 
 
