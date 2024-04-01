@@ -135,10 +135,10 @@ $ git pull
 $ git fetch #download updates (to update a new branch -> need to $ git checkout <a new branch>)
 
 $ git merge dev (we on main)
-$ git branch -d <branch-1> <branch-2>
-$ git push --delete origin branch-2-1 #sdd info to gitHUB about delited branch
+$ git branch -d <branch-1> <branch-2> (we on main and want to merge 2 branches and after delele them)
+$ git push --delete origin branch-2-1 #add info to gitHUB about delited branch
 $ git push <origin> --mirror #?is better? #to upload to gitHAB ALL changes
-
+g
 $ git rebase <main> (we on branch and want to rebase at the end of main from the start of the branch) # 
 
 $ git push
@@ -196,9 +196,20 @@ $ git reset --hard #reset to the last commit
 
 
 #CHERRY PICK
+$ git cherry-pick a8f3fd2 #we are on the branch and add from ### where we want to see changes
+                  <commit> #add commit on the branch
+                  <branch> #add commit the last commit from the <branch> on the current branch
+                ..<branch> #add commit ALL commits from the <branch> on the current branch
 
+#AMEND
+we commited a file (add, commit), but it was not correct
+now we want to fix it
 
+$ echo 'text' <file> # firstly, make changes in the file
+$ git add .          # add the repo
+$ git commit --amend (write at the end of file ==> :wq) # and rewrite the last commit
 
+$ git reflog #hach# # and go back to the previous commit
 
 
 
